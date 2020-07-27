@@ -3,10 +3,12 @@
     if (!empty($tag_res)) {
 ?>
 <div class="d-flex small xl_tags">
-    <?php foreach($tag_res as $tag) {
-    echo "<a href='" . url('search-tag-' . $tag['name']) . "'>" . $tag['name'] . "</a>,&nbsp;";
-    } ?>
-</div>
-<?php
+    <?php
+    $tag_list = [];
+    foreach($tag_res as $tag) {
+        $tag_list[] = "<a href='" . url('tag-' . $tag['name']) . "'>" . $tag['name'] . "</a>";
     }
-?>
+    echo implode(',&nbsp;', $tag_list);
+    ?>
+</div>
+<?php } ?>
