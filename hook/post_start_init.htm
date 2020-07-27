@@ -1,0 +1,11 @@
+$form_tags = '';
+
+if($route == 'post' && $action == 'update' && $isfirst) {
+    $tag_res = xl_tags_find_by_tid($thread['tid']);
+    if (!empty($tag_res)) {
+        $tags = array_column($tag_res, 'name');
+        $form_tags = implode(',', $tags);
+    }
+}
+
+

@@ -1,0 +1,12 @@
+<?php
+    $tag_res = xl_tags_find_by_tid($thread['tid']);
+    if (!empty($tag_res)) {
+?>
+<div class="d-flex small xl_tags">
+    <?php foreach($tag_res as $tag) {
+    echo "<a href='" . url('search-tag-' . $tag['name']) . "'>" . $tag['name'] . "</a>,&nbsp;";
+    } ?>
+</div>
+<?php
+    }
+?>

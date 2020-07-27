@@ -1,0 +1,10 @@
+{
+    "name": "标签云",
+    "brief": "标签云是一款 XiunoBBS 插件，根据标签对帖子进行检索。<br/><a href='https://bbs.uhila.com/thread-7.htm' target='_blank'><strong>点击查看教程</strong></a><br/><strong>Gitee 开源地址:</strong> <a href='https://gitee.com/xiulab/xl_tags' target='_blank'>https://gitee.com/xiulab/xl_tags</a>",
+    "version": "1.0.0",
+    "bbs_version": "4.0",
+    "installed": 0,
+    "enable": 0,
+    "hooks_rank": [],
+    "dependencies": []
+}
