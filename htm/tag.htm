@@ -1,0 +1,40 @@
+<?php include _include(APP_PATH.'view/htm/header.inc.htm');?>
+
+<div class="row">
+	<div class="col-lg-10 mx-auto">
+
+		<?php if($threadlist) { ?>
+
+		<div class="card">
+			<div class="card-header">
+				<ul class="nav nav-tabs card-header-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" href="javascript:void(0);">
+							主题列表
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body">
+				<ul class="list-unstyled threadlist mb-0">
+					<?php include _include(APP_PATH.'view/htm/thread_list.inc.htm');?>
+				</ul>
+			</div>
+		</div>
+
+		<?php } else { ?>
+
+		<div class="card">
+			<div class="card-body">
+				无结果
+			</div>
+		</div>
+
+		<?php } ?>
+
+		<?php include _include(APP_PATH.'view/htm/thread_list_mod.inc.htm');?>
+
+	</div>
+</div>
+
+<?php include _include(APP_PATH.'view/htm/footer.inc.htm');?>
