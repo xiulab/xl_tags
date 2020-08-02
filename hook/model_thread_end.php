@@ -8,7 +8,7 @@ function xl_tags_batch_create($tid, $arr, $d = NULL)
 
     $new_tag_arr = [];
     foreach ($arr as $value) {
-        $new_value = trim($value);
+        $new_value = str_replace('-', '_', trim($value));
         if ($new_value !== '') {
             $new_tag_arr[] = sprintf("(%d, '%s')", $tid, addslashes($new_value));
         }
